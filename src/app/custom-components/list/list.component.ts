@@ -11,7 +11,7 @@ import { StorageService } from 'src/app/services/storage.service';
 export class ListComponent implements OnInit {
   posts: Post[] = [];
 
-  constructor(private reddit: RedditService, public storage:StorageService) {}
+  constructor(private reddit: RedditService) {}
 
   ngOnInit(): void {
     this.reddit.getRedditPosts().subscribe(childrenData => this.posts = childrenData);

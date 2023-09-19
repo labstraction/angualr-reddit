@@ -6,9 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 // componenti creati
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { ListComponent } from './components/list/list.component';
-import { CardComponent } from './components/card/card.component';
+import { HeaderComponent } from './custom-components/header/header.component';
+import { ListComponent } from './custom-components/list/list.component';
+import { CardComponent } from './custom-components/card/card.component';
 
 
 
