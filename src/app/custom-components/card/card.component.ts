@@ -10,6 +10,8 @@ import { StorageService } from 'src/app/services/storage.service';
 export class CardComponent {
 
   @Input() postData?: Post;
+  @Input() isFavourite: boolean = false;
+  @Input() bColor: string = 'white';
 
   constructor(public storage: StorageService){}
 

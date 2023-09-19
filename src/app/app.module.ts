@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './custom-components/header/header.component';
 import { ListComponent } from './custom-components/list/list.component';
 import { CardComponent } from './custom-components/card/card.component';
+import { FavouritesComponent } from './custom-components/favourites/favourites.component';
+import { TimestampToDatePipe } from './pipes/timestamp-to-date.pipe';
 
 
 
@@ -17,7 +19,9 @@ import { CardComponent } from './custom-components/card/card.component';
     AppComponent,
     HeaderComponent,
     ListComponent,
-    CardComponent
+    CardComponent,
+    FavouritesComponent,
+    TimestampToDatePipe
   ],
   imports: [
     BrowserModule,

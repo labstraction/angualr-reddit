@@ -11,10 +11,14 @@ import { StorageService } from 'src/app/services/storage.service';
 export class ListComponent implements OnInit {
   posts: Post[] = [];
 
-  constructor(private reddit: RedditService) {}
+  constructor(private reddit: RedditService, private storage: StorageService) {}
 
   ngOnInit(): void {
-    this.reddit.getRedditPosts().subscribe(childrenData => this.posts = childrenData);
+    this.reddit.getRedditPosts().subscribe(childrenData => {
+      this.posts = childrenData;
+      for (const post of this.posts) {
+        post.isFavourite = this.storage.isFavourite(post);
+      }
+    });
   }
-
 }
